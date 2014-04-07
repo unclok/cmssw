@@ -5,7 +5,7 @@
 #include "FWCore/Framework/interface/ESHandle.h"
 
 #include "L1Trigger/CSCTrackFinder/test/src/TFTrack.h"
-#include <iostream>
+#include "iostream"
 namespace csctf_analysis
 {
   TFTrack::TFTrack():Track() {}
@@ -74,7 +74,7 @@ namespace csctf_analysis
     Mode =  track.first.mode();
 
     // To throw an error if the newer fixed L1Track::mode() isn't implemented
-    int AddressEta = track.first.addressEta();
+    //    int AddressEta = track.first.addressEta();
 
     Phi = phi;
     PhiPacked = track.first.localPhi();
