@@ -355,9 +355,7 @@ void CSCTFEfficiency::beginJob()
   gStyle->SetOptStat(0);
   tfHistList = new TrackHistogramList("TrackFinder",configuration);
   refHistList = new TrackHistogramList("Reference",configuration);
-  std::cout<<"start make effhitogramlist"<<endl;
   effhistlist = new EffHistogramList("Efficiency",configuration);
-  std::cout<<"end make effhitogramlist"<<endl;
   resHistList = new ResolutionHistogramList("Resolution",configuration);
   multHistList = new MultiplicityHistogramList();
   statFile = new StatisticsFile( statsFilename );
@@ -370,9 +368,7 @@ void CSCTFEfficiency::endJob()
   statFile->WriteStatistics( *tfHistList, *refHistList);
   if(saveHistImages)
   {
-      std::cout<<"start print effhistogramlist"<<endl;
       effhistlist->Print();
-      std::cout<<"end print effhistogramlist"<<endl;
       resHistList->Print();
   }
   delete tfHistList;
