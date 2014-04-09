@@ -29,13 +29,13 @@
 
 #The following plugins require this library to be built
 
-<library file="src/*.cc" name="CSCTFAnaHelpers">
-</library>
+###<library file="src/*.cc" name="CSCTFAnaHelpers">
+###</library>
 
-<library file="analysis/CSCTFEfficiency.cc" name="CSCTFEfficiency">
-     <flags EDM_PLUGIN="1"/>
-     <lib name="CSCTFAnaHelpers"/>
-</library>
+###<library file="analysis/CSCTFEfficiency.cc" name="CSCTFEfficiency">
+###     <flags EDM_PLUGIN="1"/>
+###     <lib name="CSCTFAnaHelpers"/>
+###</library>
 
 ###<library file="analysis/LCT*.cc" name="CSCTFLCTAna">
 ###     <flags EDM_PLUGIN="1"/>
