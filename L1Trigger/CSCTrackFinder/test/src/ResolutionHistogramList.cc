@@ -18,12 +18,15 @@ namespace csctf_analysis
 	PtQ1Res = dir.make<TH1F>("PtQ1Res","Pt Q>=1 Resolution",300,-1.5,1.5);
 	PtQ2Res = dir.make<TH1F>("PtQ2Res","Pt Q>=2 Resolution",300,-1.5,1.5);
 	PtQ3Res = dir.make<TH1F>("PtQ3Res","Pt Q>=3 Resolution",300,-1.5,1.5);
+	PtQ4Res = dir.make<TH1F>("PtQ4Res","Pt Q>=4 Resolution",300,-1.5,1.5);
 	EtaQ1Res = dir.make<TH1F>("EtaQ1Res","Eta Q>=1 Resolution",1000,-1, 1);
 	EtaQ2Res = dir.make<TH1F>("EtaQ2Res","Eta Q>=2 Resolution",1000,-1, 1);
 	EtaQ3Res = dir.make<TH1F>("EtaQ3Res","Eta Q>=3 Resolution",1000,-1, 1);
+	EtaQ4Res = dir.make<TH1F>("EtaQ4Res","Eta Q>=4 Resolution",1000,-1, 1);
 	PhiQ1Res = dir.make<TH1F>("PhiQ1Res","Phi Q>=1 Resolution",1000,-1, 1);
 	PhiQ2Res = dir.make<TH1F>("PhiQ2Res","Phi Q>=2 Resolution",1000,-1, 1);
 	PhiQ3Res = dir.make<TH1F>("PhiQ3Res","Phi Q>=3 Resolution",1000,-1, 1);
+	PhiQ4Res = dir.make<TH1F>("PhiQ4Res","Phi Q>=4 Resolution",1000,-1, 1);
 
 	PtQ2ResGolden = dir.make<TH1F>("PtQ2ResGolden","Pt Q>=2 Resolution; 1.2 <= eta <= 2.1",300,-1.5,1.5);
 	PhiQ2ResGolden = dir.make<TH1F>("PhiQ2ResGolden","Phi Q>=2 Resolution; 1.2 <= eta <= 2.1",1000,-1, 1);
@@ -102,6 +105,12 @@ namespace csctf_analysis
 	PhiQ3Res->Fill( PhiResd ); 
 	EtaQ3Res->Fill( EtaResd );
 	PtQ3Res->Fill( ptResd );
+      }
+    if ( refTrk.getQuality() >= 4 )
+      {
+	PhiQ4Res->Fill( PhiResd ); 
+	EtaQ4Res->Fill( EtaResd );
+	PtQ4Res->Fill( ptResd );
       }
     
     
